@@ -7,9 +7,15 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Products from './Components/Products';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Pay from './pages/Pay';
+import Success from './pages/Success';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const LoggedInUser = false;
+  const LoggedInUser = useSelector((state) => state.user.currentUser);
+  // const LoggedInUser = false
+  
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -21,6 +27,8 @@ function App() {
         <Route path="login" element={LoggedInUser ? <Navigate replace to="/home" />: <Login/>} />
         
         <Route path="register" element={LoggedInUser ? <Navigate replace to="/home" />: <Register/>} />
+        <Route path="pay" element={<Pay />} />
+        <Route path="success" element={<Success />} />
       </Routes>
     </BrowserRouter>
   );

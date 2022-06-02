@@ -1,12 +1,13 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from './../Responsive';
+import { mobile, tab } from './../Responsive';
 
 const Container = styled.div`
   display: flex;
   background-color:lightgray;
   ${mobile({flexDirection: "column"})}
+  ${tab({flexDirection: "column"})}
 `;
 const Left = styled.div`
   flex: 1;

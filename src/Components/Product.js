@@ -5,6 +5,8 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import Product2 from './../pages/Product2';
 
 
 const Info = styled.div`
@@ -37,13 +39,13 @@ const Container = styled.div`
       opacity:1;
   }
 `;
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
+// const Circle = styled.div`
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 50%;
+//   background-color: white;
+//   position: absolute;
+// `;
 const Image = styled.img`
   height: 75%;
   z-index: 2;
@@ -68,21 +70,35 @@ transform:scale(1.1);
 
 const Product = ({ item }) => {
   return (
+    <>
+      
+
+      
     <Container>
-      <Circle />
+   
+    
       <Image src={item.img} />
+      <Link to={`/product/${item._id}`}>
       <Info>
+      
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
         <Icon>
           <SearchOutlined />
         </Icon>
+        
         <Icon>
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
+      </Link>
+     
     </Container>
+
+    
+    
+    </>
   );
 };
 
