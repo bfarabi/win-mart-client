@@ -6,14 +6,19 @@ import { Link } from 'react-router-dom';
 const CategoryItem = ({item}) => {
     const Container = styled.div`
     flex: 1;
-    margin: 5px;
-    padding-bottom: 5px;
-    ${'' /* height: 28rem; */}
-    ${'' /* position: relative; */}
+    margin: 1.5rem;
+    padding:1.5rem;
     border: 1px solid lightgray;
-    box-shadow:3px 3px 5px gray;
+    box-shadow: 7px 7px 6px darkgrey;
     border-radius:10px;
     text-align: center;
+    transition: 0.8s ease;
+
+    &:hover {
+       transform:scale(1.05)
+    }
+   
+    
    
   
     

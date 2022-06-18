@@ -21,7 +21,7 @@ const SearchContainer = styled.div`
   justify-content: center;
 
   padding: 7px 0px;
-  background: lightgray;
+  background: teal;
 `;
 
 const CircleContainer = styled.div`

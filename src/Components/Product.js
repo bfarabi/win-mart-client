@@ -26,7 +26,7 @@ const Info = styled.div`
 `;
 const Container = styled.div`
   flex: 1;
-  margin: 5px;
+  margin: 0.5rem;
   min-width: 280px;
   height: 350px;
   display: flex;
@@ -34,6 +34,8 @@ const Container = styled.div`
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
+  border: 1px solid lightgray;
+ border-radius: 10px;
 
   &:hover ${Info} {
       opacity:1;
